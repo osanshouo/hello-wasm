@@ -10,7 +10,8 @@
     <div id="app"></div>
 
     <script type="module">
-        import init, {fibonacci, fizzbuzz} from '/pkg/hello_wasm.js';
+        
+        import init, {fibonacci, fizzbuzz} from './pkg/hello_wasm.js';
         async function run() {
             await init();
 
