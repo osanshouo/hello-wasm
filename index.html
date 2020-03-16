@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello, WebAssembly!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script type="module">
+        import init, {fibonacci, fizzbuzz} from '/pkg/hello_wasm.js';
+        async function run() {
+            await init();
+
+            console.log( fibonacci(8) );
+            console.log( fizzbuzz(10) );
+        };
+        run();
+    </script>
+</body>
+</html>
